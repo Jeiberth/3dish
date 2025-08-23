@@ -1,0 +1,83 @@
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+:root {
+  --primary: #667eea;
+  --primary-rgb: 102, 126, 234;
+
+  --secondary: #764ba2;
+
+  --text-primary: #1a202c;
+  --text-secondary: #718096;
+
+  --background: #ffffff;
+  --background-rgb: 255, 255, 255;
+
+  --border: #e2e8f0;
+}
+
+[data-theme="dark"] {
+
+    --primary: #667eea; /* Keep same unless you want a different dark variant */
+    --primary-rgb: 102, 126, 234;
+
+    --secondary: #764ba2;
+
+    --text-primary: #1a202c;
+    --text-secondary: #718096;
+
+    --background: #1a202c;
+    --background-rgb: 26, 32, 44;
+
+    --border: #4a5568;
+
+        --color-primary: black;
+    --color-accent: black;
+    --color-text: hsl(var(--hue-secondary), 15%, 85%);
+    --color-text-muted: hsl(var(--hue-secondary), 15%, 55%);
+    --color-bg: hsl(var(--hue-secondary), 15%, 15%);
+    --color-surface: hsl(var(--hue-secondary), 15%, 20%);
+    --color-border: hsl(var(--hue-secondary), 15%, 30%);
+}
+
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+  flex: 1; /* Fills available space, pushes footer to bottom if content is short */
+}
+
+.hoverAnimation {
+    transition: all 0.2s ease;
+}
+
+
+.hoverAnimation:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(146, 146, 146, 0.726);
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
